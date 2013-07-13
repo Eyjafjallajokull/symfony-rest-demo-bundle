@@ -1,0 +1,26 @@
+Eyja\RestDemoBundle\Entity\Product:
+    type: entity
+    table: product
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        name:
+            type: string
+            length: 255
+        price:
+            type: decimal
+            scale: 2
+        description:
+            type: text
+        category_id:
+            type: integer
+        is_disabled:
+            type: boolean
+    manyToOne:
+        category:
+            targetEntity: Category
+            joinColumn:
+                name: category_id
+                referencedColumnName: id

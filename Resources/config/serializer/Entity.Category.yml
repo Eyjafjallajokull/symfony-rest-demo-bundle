@@ -1,0 +1,17 @@
+Eyja\RestDemoBundle\Entity\Category:
+    properties:
+        id:
+            type: integer
+            groups: [collection, single]
+        name:
+            type: string
+            groups: [collection, single]
+        parent_id:
+            type: integer
+            groups: [collection, single]
+        children:
+            exclude: false
+            max_depth: 2
+            groups: [single]
+        parent:
+            exclude: true

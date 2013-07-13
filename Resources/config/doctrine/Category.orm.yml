@@ -1,0 +1,21 @@
+Eyja\RestDemoBundle\Entity\Category:
+    type: entity
+    table: category
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        name:
+            type: string
+            length: 255
+        parent_id:
+            type: integer
+    oneToMany:
+        children:
+            targetEntity: Category
+            mappedBy: parent
+    manyToOne:
+        parent:
+            targetEntity: Category
+            inversedBy: children

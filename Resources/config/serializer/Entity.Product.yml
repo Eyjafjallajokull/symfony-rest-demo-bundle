@@ -1,0 +1,23 @@
+Eyja\RestDemoBundle\Entity\Product:
+    properties:
+        id:
+            type: integer
+            groups: [collection, single]
+        name:
+            type: string
+            groups: [collection, single]
+        description:
+            type: string
+            groups: [collection, single]
+        price:
+            type: double
+            groups: [collection, single]
+        category_id:
+            serialized_name: categoryId
+            type: integer
+            groups: [collection, single]
+        category:
+            groups: [single]
+            max_depth: 2
+        is_disabled:
+            exclute: true

@@ -1,0 +1,21 @@
+Eyja\RestDemoBundle\Entity\Product:
+    properties:
+        id:
+            - NotBlank: {groups: [update]}
+        name:
+            - NotBlank: {groups: [update, create]}
+        description:
+            - NotBlank: {groups: [update, create]}
+        price:
+            - NotBlank: {groups: [update, create]}
+        category_id:
+            - NotBlank: {groups: [update, create]}
+
+Eyja\RestDemoBundle\Entity\Category:
+    properties:
+        id:
+            - NotBlank: {groups: [update]}
+        name:
+            - NotBlank: {groups: [update, create]}
+        parent_id:
+            - NotBlank: {groups: [update, create]}

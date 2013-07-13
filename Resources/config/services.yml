@@ -1,0 +1,9 @@
+services:
+  eyja_rest_demo.controller.product:
+    class: Eyja\RestDemoBundle\Controller\RestProductController
+    tags: [ { name: rest.controller } ]
+
+  eyja_rest_demo.controller.category:
+    class: Eyja\RestDemoBundle\Controller\RestCategoryController
+    tags: [ { name: rest.controller } ]
+

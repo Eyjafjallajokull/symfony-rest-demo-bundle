@@ -1,0 +1,4 @@
+rest_product_getCollection_sweets:
+    pattern:  /sweets
+    defaults: { _controller: EyjaRestDemoBundle:RestProduct:getCollection }
+    methods: [GET]
