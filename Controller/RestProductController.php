@@ -10,23 +10,23 @@ use Eyja\RestBundle\Controller\RestRepositoryController;
  */
 class RestProductController extends RestRepositoryController {
 
-    /**
-     * Return doctrine entity name associated with this controller
-     *
-     * @return string
-     */
-    public function getRepositoryName() {
+	/**
+	 * Return doctrine entity name associated with this controller
+	 *
+	 * @return string
+	 */
+	public function getRepositoryName() {
 		return 'EyjaRestDemoBundle:Product';
 	}
 
-    /**
-     * Return resource name
-     *
-     * This name will be used to generate routes, eg. /product, /product/1
-     *
-     * @return string
-     */
-    public function getResourceName() {
+	/**
+	 * Return resource name
+	 *
+	 * This name will be used to generate routes, eg. /product, /product/1
+	 *
+	 * @return string
+	 */
+	public function getResourceName() {
 		return 'product';
 	}
 
