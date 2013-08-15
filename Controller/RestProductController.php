@@ -30,6 +30,21 @@ class RestProductController extends RestRepositoryController {
 		return 'product';
 	}
 
+	/**
+	 * Return array of field names allowed for filtering
+	 *
+	 * @return array
+	 */
+	public function getAllowedFilterFields() {
+		return array('price', 'categoryId');
+	}
+
+	/**
+	 * Extend default query used for fetching entities
+	 *
+	 * @param QueryBuilder $queryBuilder
+	 * @return QueryBuilder|void
+	 */
 	protected function setQueryWhere(QueryBuilder $queryBuilder) {
 		$queryBuilder->andWhere('c.is_disabled = 0');
 		return $queryBuilder;

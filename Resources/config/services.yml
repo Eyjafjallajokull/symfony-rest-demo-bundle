@@ -15,3 +15,4 @@ services:
             - [setRepositoryName, [EyjaRestDemoBundle:Category]]
             - [setResourceName, [category]]
             - [setAllowedActions, [[getCollection, getSingle]]]
+            - [setAllowedFilterFields, [[name, parentId]]]
