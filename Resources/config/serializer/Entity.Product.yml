@@ -20,4 +20,4 @@ Eyja\RestDemoBundle\Entity\Product:
             groups: [single]
             max_depth: 2
         is_disabled:
-            exclute: true
+            exclude: true
