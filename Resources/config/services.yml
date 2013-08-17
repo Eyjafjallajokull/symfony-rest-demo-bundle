@@ -1,18 +1,15 @@
 services:
     # REST resource with defined custom controller
     eyja_rest_demo.controller.product:
-        class: Eyja\RestDemoBundle\Controller\RestProductController
+        parent: eyja_rest.abstract_controller
+        arguments: [EyjaRestDemoBundle:Product, product]
         tags: [ { name: rest.controller } ]
-        calls:
-            - [setContainer, [@service_container]]
 
     # Resource without custom controller
     eyja_rest_demo.controller.category:
-        class: Eyja\RestBundle\Controller\RestRepositoryController
+        parent: eyja_rest.abstract_controller
+        arguments: [EyjaRestDemoBundle:Category, category]
         tags: [ { name: rest.controller } ]
         calls:
-            - [setContainer, [@service_container]]
-            - [setRepositoryName, [EyjaRestDemoBundle:Category]]
-            - [setResourceName, [category]]
             - [setAllowedActions, [[getCollection, getSingle]]]
             - [setAllowedFilterFields, [[name, parentId]]]
