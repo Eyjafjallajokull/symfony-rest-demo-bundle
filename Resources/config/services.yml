@@ -2,6 +2,7 @@ services:
     # REST resource with defined custom controller
     eyja_rest_demo.controller.product:
         parent: eyja_rest.abstract_controller
+        class: Eyja\RestDemoBundle\Controller\RestProductController
         arguments: [EyjaRestDemoBundle:Product, product]
         tags: [ { name: rest.controller } ]
 
